@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by rg3 on 5/23/17.
  */
+
 @Repository
-@RepositoryRestResource(collectionResourceRel = "person", path = "person")
+@RepositoryRestResource(path = "person", collectionResourceRel = "person")
 public interface PersonRepository extends CrudRepository<Person, Long> {
 }
