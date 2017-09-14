@@ -1,5 +1,24 @@
 server:
-  PORT: 8000
+  port: 8095
+
+logging:
+  level:
+    com.nationstar: DEBUG
+
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+info:
+  component: Spring Data Rest Service
 
 spring:
   datasource:
